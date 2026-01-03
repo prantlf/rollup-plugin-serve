@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.1.0](https://github.com/prantlf/rollup-plugin-serve/compare/v3.0.1...v3.1.0) (2026-01-03)
+
+### Features
+
+* Add major features from webpack-dev-server ([abe02a0](https://github.com/prantlf/rollup-plugin-serve/commit/abe02a0c68ae29d00dbb5f2ff7e7e07a60c66f5a))
+
 ## 3.0.1 (2026-01-01)
 
 ### Fixed

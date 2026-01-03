@@ -1,6 +1,6 @@
 {
   "name": "@prantlf/rollup-plugin-serve",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "Rollup plugin to serve the bundle and other files in the project directory.",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
