@@ -13,6 +13,7 @@ This is a fork of the original project with the following enhancements:
   * contentBasePublicPath
   * serveIndex
   * headers
+  * autoPort
 
 ## Installation
 
