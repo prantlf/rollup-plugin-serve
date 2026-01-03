@@ -2,6 +2,18 @@
 
 Rollup plugin to serve the bundle and other files in the project directory.
 
+This is a fork of the original project with the following enhancements:
+
+* Additional webpack-dev-server features [#106]
+  * compress
+  * proxy
+  * before
+  * after
+  * historyApiFallback (object format)
+  * contentBasePublicPath
+  * serveIndex
+  * headers
+
 ## Installation
 
 ```
@@ -152,3 +164,4 @@ The MIT License (MIT). Please see [License File](LICENSE) for more information.
 
 [link-author]: https://github.com/thgh
 [link-contributors]: ../../contributors
+[#106]: https://github.com/thgh/rollup-plugin-serve/pull/106
