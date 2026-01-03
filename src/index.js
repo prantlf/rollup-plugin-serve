@@ -1,6 +1,6 @@
-import { createServer as createHttpsServer } from 'https'
-import { createServer } from 'http'
-import { resolve } from 'path'
+import { createServer as createHttpsServer } from 'node:https'
+import { createServer } from 'node:http'
+import { resolve } from 'node:path'
 import { Mime } from 'mime/lite'
 
 import standardTypes from 'mime/types/standard.js'
@@ -59,7 +59,7 @@ function serve(options = { contentBase: '' }) {
   }
 
   if (options.headers) {
-    function headersHandler(req, res, next) {
+    function headersHandler(_req, res, next) {
       for (const name in options.headers) {
         res.setHeader(name, options.headers[name])
       }
@@ -81,7 +81,7 @@ function serve(options = { contentBase: '' }) {
      * }
      */
     if (!Array.isArray(options.proxy)) {
-      if (Object.prototype.hasOwnProperty.call(options.proxy, 'target')) {
+      if (Object.hasOwn(options.proxy, 'target')) {
         options.proxy = [options.proxy]
       } else {
         options.proxy = Object.keys(options.proxy).map((context) => {
@@ -172,7 +172,7 @@ function serve(options = { contentBase: '' }) {
       app.use(proxyHandle)
       // Also forward error requests to the proxy so it can handle them.
       // eslint-disable-next-line handle-callback-err
-      app.use((error, req, res, next) => proxyHandle(req, res, next))
+      app.use((_error, req, res, next) => proxyHandle(req, res, next))
     })
   }
 
@@ -222,12 +222,12 @@ function serve(options = { contentBase: '' }) {
   server.listen(options.port, options.host, () => options.onListening(server))
 
   // Assemble url for error and info messages
-  const url = (options.https ? 'https' : 'http') + '://' + (options.host || 'localhost') + ':' + options.port
+  const url = `${options.https ? 'https' : 'http'}://${options.host || 'localhost'}:${options.port}`
 
   // Handle common server errors
   server.on('error', (e) => {
     if (e.code === 'EADDRINUSE') {
-      console.error(url + ' is in use, either stop the other server or use a different port.')
+      console.error(`${url} is in use, either stop the other server or use a different port.`)
       process.exit()
     } else {
       throw e
@@ -245,7 +245,7 @@ function serve(options = { contentBase: '' }) {
         // Log which url to visit
         if (options.verbose !== false) {
           options.contentBase.forEach((base) => {
-            console.log(green(url) + ' -> ' + resolve(base))
+            console.log(`${green(url)} -> ${resolve(base)}`)
           })
         }
 
@@ -263,7 +263,7 @@ function serve(options = { contentBase: '' }) {
 }
 
 function green(text) {
-  return '\u001b[1m\u001b[32m' + text + '\u001b[39m\u001b[22m'
+  return `\u001b[1m\u001b[32m${text}\u001b[39m\u001b[22m`
 }
 
 function closeServerOnTermination() {
