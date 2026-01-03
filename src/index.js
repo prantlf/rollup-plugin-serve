@@ -256,7 +256,7 @@ function serve(options = { contentBase: '' }) {
 
         // Log which url to visit
         if (options.verbose !== false) {
-          options.contentBase.forEach(base => {
+          options.contentBase.forEach((base) => {
             console.log(`${green(getUrl())} -> ${resolve(base)}`)
           })
         }

@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.2.0](https://github.com/prantlf/rollup-plugin-serve/compare/v3.1.0...v3.2.0) (2026-01-03)
+
+### Features
+
+* Add option autoPort for changing ports until a free one is found ([84d07ca](https://github.com/prantlf/rollup-plugin-serve/commit/84d07ca888581db987480f5f674b3966ba841263))
+
+### Bug Fixes
+
+* Fix external modules ([0e77844](https://github.com/prantlf/rollup-plugin-serve/commit/0e77844205233f0828a83a7e6de758b8faf4f376))
+
 ## [3.1.0](https://github.com/prantlf/rollup-plugin-serve/compare/v3.0.1...v3.1.0) (2026-01-03)
 
 ### Features
