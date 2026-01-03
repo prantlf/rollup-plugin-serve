@@ -1,7 +1,7 @@
 {
-  "name": "rollup-plugin-serve",
+  "name": "@prantlf/rollup-plugin-serve",
   "version": "3.0.1",
-  "description": "Serve your rolled up bundle",
+  "description": "Rollup plugin to serve the bundle and other files in the project directory.",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "index.d.ts",
@@ -14,8 +14,9 @@
     "build": "rollup -c",
     "dev": "rollup -cw",
     "fix": "prettier --write .",
-    "prepare": "yarn fix && yarn build",
-    "test": "cd test && rollup -cw || cd .."
+    "lint": "biome lint",
+    "prepare": "npm run fix && npm run build",
+    "test": "npm run lint && cd test && rollup -cw || cd .."
   },
   "keywords": [
     "rollup",
@@ -25,14 +26,17 @@
     "static"
   ],
   "license": "MIT",
-  "author": "Thomas Ghysels <info@thomasg.be>",
-  "homepage": "https://github.com/thgh/rollup-plugin-serve",
+  "author": "Ferdinand Prantl <prantlf@gmail.com>",
+  "contributors": [
+    "Thomas Ghysels <info@thomasg.be>"
+  ],
+  "homepage": "https://github.com/prantlf/rollup-plugin-serve",
   "bugs": {
-    "url": "https://github.com/thgh/rollup-plugin-serve/issues"
+    "url": "https://github.com/prantlf/rollup-plugin-serve/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thgh/rollup-plugin-serve"
+    "url": "https://github.com/prantlf/rollup-plugin-serve"
   },
   "files": [
     "dist",
@@ -50,6 +54,7 @@
     "serve-index": "^1.9.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.3.11",
     "@types/node": "^25.0.3",
     "prettier": "^3",
     "rollup": "4"

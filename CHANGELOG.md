@@ -1,8 +1,6 @@
 # Changelog
 
-All notable changes to `rollup-plugin-serve` will be documented in this file.
-
-## [3.0.1] - 2026-01-01
+## 3.0.1 (2026-01-01)
 
 ### Fixed
 

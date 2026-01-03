@@ -1,31 +1,18 @@
-# Rollup plugin to serve the bundle
+# @prantlf/rollup-plugin-serve
 
-<a href="LICENSE">
-  <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="Software License" />
-</a>
-<a href="https://github.com/thgh/rollup-plugin-serve/issues">
-  <img src="https://img.shields.io/github/issues/thgh/rollup-plugin-serve.svg" alt="Issues" />
-</a>
-<a href="https://npmjs.org/package/rollup-plugin-serve">
-  <img src="https://img.shields.io/npm/v/rollup-plugin-serve.svg?style=flat-squar" alt="NPM" />
-</a>
-<a href="https://github.com/thgh/rollup-plugin-serve/releases">
-  <img src="https://img.shields.io/github/release/thgh/rollup-plugin-serve.svg" alt="Latest Version" />
-</a>
+Rollup plugin to serve the bundle and other files in the project directory.
 
 ## Installation
 
 ```
-npm install --save-dev rollup-plugin-serve
-
-yarn add rollup-plugin-serve
+npm install --save-dev @prantlf/rollup-plugin-serve
 ```
 
 ## Usage
 
 ```js
 // rollup.config.js
-import serve from 'rollup-plugin-serve'
+import serve from '@prantlf/rollup-plugin-serve'
 
 export default {
   input: 'src/main.js',
@@ -156,7 +143,7 @@ To get it running:
 
 ## Credits
 
-- [Thomas Ghysels](https://github.com/thgh)
+- [Thomas Ghysels][link-author]
 - [All Contributors][link-contributors]
 
 ## License
@@ -165,4 +152,3 @@ The MIT License (MIT). Please see [License File](LICENSE) for more information.
 
 [link-author]: https://github.com/thgh
 [link-contributors]: ../../contributors
-[rollup-plugin-serve]: https://www.npmjs.com/package/rollup-plugin-serve
