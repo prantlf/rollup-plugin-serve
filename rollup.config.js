@@ -5,10 +5,9 @@ export default {
     { file: 'dist/index.mjs', sourcemap: true }
   ],
   external: [
-    'fs',
-    'https',
-    'http',
-    'path',
+    'node:https',
+    'node:http',
+    'node:path',
     'mime/lite',
     'mime/types/standard.js',
     'mime/types/other.js',
